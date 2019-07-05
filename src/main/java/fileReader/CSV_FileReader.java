@@ -17,13 +17,13 @@ public class CSV_FileReader {
 //        return list_of_coordinates;
 //    }
 
-    public String[][] read (String inputPath){
+    public List<String> read (String inputPath) {
 
         List<String> list_of_coordinates = new ArrayList<>();
         String line = "";
-        try  (
-                BufferedReader bufferedReader = new BufferedReader(new FileReader(inputPath))){
-            while ((line = bufferedReader.readLine()) !=null){
+        try (
+                BufferedReader bufferedReader = new BufferedReader(new FileReader(inputPath))) {
+            while ((line = bufferedReader.readLine()) != null) {
                 list_of_coordinates.add(line);
             }
 
@@ -34,19 +34,7 @@ public class CSV_FileReader {
                 IOException e) {
             e.printStackTrace();
         }
-
-        //====to poniżej można by chyba wrzucić do parsera=====
-        String[] table_of_readLine;
-        String[][] table_of_coordinates = new String[list_of_coordinates.size()][2];
-        //int counter = 0;
-        for(int i=0; i<list_of_coordinates.size(); i++){
-            table_of_readLine = list_of_coordinates.get(i).split(";");
-
-            table_of_coordinates[i][0] = table_of_readLine[0];
-            table_of_coordinates[i][1] = table_of_readLine[1];
-            //counter++;
-        }
-
-        return table_of_coordinates;
+        return list_of_coordinates;
     }
+
 }
