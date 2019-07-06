@@ -1,5 +1,8 @@
 package coordinates;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AppCoordinates {
     public static void main(String[] args) {
         DMSutils dmsUtils = new DMSutils();
@@ -8,6 +11,7 @@ public class AppCoordinates {
         Integer degreesLat = dmsCoordinates.getDmsLatitude().getDegrees();
         System.out.println(degreesLat);
         System.out.println(dmsCoordinates.toString());
+
 
     }
 
