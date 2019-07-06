@@ -1,6 +1,7 @@
 package coordinates;
 
 public class DMScoordinates {
+
     DMSlatitude dmsLatitude;
     DMSlongitude dmsLongitude;
 
@@ -10,21 +11,18 @@ public class DMScoordinates {
         this.dmsLongitude = dmsLongitude;
     }
 
-    public DMSlongitude setDMSlongitude (Integer d, Integer m, Double s){
-        DMSlongitudeBuilder dmsLongitudeBuilder = new DMSlongitudeBuilder();
-        DMSlongitude dmsLongitude = dmsLongitudeBuilder.degrees(d).minutes(m).seconds(s).buildDMSlongitude();
+    public DMSlatitude getDmsLatitude() {
+        return dmsLatitude;
+    }
+
+    public DMSlongitude getDmsLongitude() {
         return dmsLongitude;
     }
 
-    public DMSlatitude setDMSlatitude (Integer d, Integer m, Double s) {
-        DMSlatitudeBuilder dmsLatitudebuilder = new DMSlatitudeBuilder();
-        DMSlatitude dmsLatitude = dmsLatitudebuilder.degrees(d).minutes(m).seconds(s).builldDMSlatitude();
-        return dmsLatitude;
+    @Override
+    public String toString(){
+        return this.dmsLatitude.getDegrees() + " "+ this.dmsLatitude.getMinutes() + " " + this.dmsLatitude.getSeconds() + ";"
+                + this.dmsLongitude.getDegrees() + " " + this.dmsLongitude.getMinutes() + " " + this.dmsLongitude.getSeconds();
     }
-    //TODO doda metodę, która przyjuje w parametrach wartości DMS dla longitude i latitude i zwraca współrzędne
-    //TODO doda metodę wyświetlajacą współrzędne jako String
-
-
-
 
 }
