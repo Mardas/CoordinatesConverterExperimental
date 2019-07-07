@@ -36,4 +36,5 @@ public class DMSparser {
         }
         return dmsCoordinatesList;
     }
+    //TODO converter DMS to DD
 }
