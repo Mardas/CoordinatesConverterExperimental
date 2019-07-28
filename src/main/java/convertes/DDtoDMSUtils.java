@@ -10,7 +10,7 @@ import java.util.List;
 
 public class DDtoDMSUtils {
     public List<DMScoordinates> ddToDMSutils (String inputPath){
-        
+
         CSV_FileReader csv_fileReader = new CSV_FileReader();
         List<String> list_of_coordinates = csv_fileReader.read(inputPath);
 
