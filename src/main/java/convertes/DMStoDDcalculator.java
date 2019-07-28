@@ -12,14 +12,15 @@ public class DMStoDDcalculator {
         List<DDCoordinates> ddCoordinatesList = new ArrayList<>();
 
         for(int i = 0; i < list_of_DMSCoordinates.size(); i++){
+
             Double latitude = list_of_DMSCoordinates.get(i).getDmsLatitude()
                     .getDegrees()
-                    + list_of_DMSCoordinates.get(i).getDmsLatitude().getMinutes()/60
-                    +list_of_DMSCoordinates.get(i).getDmsLatitude().getSeconds()/360;
+                    + Double.valueOf(list_of_DMSCoordinates.get(i).getDmsLatitude().getMinutes())/60
+                    + Double.valueOf(list_of_DMSCoordinates.get(i).getDmsLatitude().getSeconds())/3600;
             Double longitude = list_of_DMSCoordinates.get(i).getDmsLongitude()
                     .getDegrees()
-                    +list_of_DMSCoordinates.get(i).getDmsLongitude().getMinutes()/60
-                    +list_of_DMSCoordinates.get(i).getDmsLongitude().getSeconds()/360;
+                    + Double.valueOf(list_of_DMSCoordinates.get(i).getDmsLongitude().getMinutes())/60
+                    + Double.valueOf(list_of_DMSCoordinates.get(i).getDmsLongitude().getSeconds())/3600;
 
             DDCoordinates ddCoordinates = new DDCoordinates();
             ddCoordinates.setLatitude(latitude);

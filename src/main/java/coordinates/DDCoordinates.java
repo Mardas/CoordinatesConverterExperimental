@@ -33,10 +33,7 @@ public class DDCoordinates {
 
     @Override
     public String toString() {
-        return "DDCoordinates{" +
-                "latitude=" + latitude +
-                ", longitude=" + longitude +
-                '}';
+        return this.latitude.toString() + ";" + this.longitude.toString();
     }
 }
 

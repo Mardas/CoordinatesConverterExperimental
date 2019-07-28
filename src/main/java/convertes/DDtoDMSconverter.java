@@ -25,6 +25,7 @@ public class DDtoDMSconverter implements Converter {
 
        DDtoDMSUtils dDtoDMSUtils = new DDtoDMSUtils();
        List<DMScoordinates> list_of_DMScoordinates = dDtoDMSUtils.ddToDMSutils(inputPath);
+
        CSVFileWriter csvFileWriter = new CSVFileWriter();
        csvFileWriter.write(outputPath, list_of_DMScoordinates);
 
