@@ -7,6 +7,7 @@ import coordinates.DDCoordinates;
 import coordinates.DMScoordinates;
 import coordinates.DMSutils;
 import fileReader.CSV_FileReader;
+import fileWriter.CSVFileWriter;
 import listsConverters.ListToTable;
 import parsers.DDparser;
 
@@ -20,12 +21,12 @@ import java.util.List;
 public class DDtoDMSconverter implements Converter {
     @Override
     public void convert(String inputPath, String outputPath) throws FileNotFoundException {
-        //TODO zapis do pliku
 
 
        DDtoDMSUtils dDtoDMSUtils = new DDtoDMSUtils();
        List<DMScoordinates> list_of_DMScoordinates = dDtoDMSUtils.ddToDMSutils(inputPath);
-
+       CSVFileWriter csvFileWriter = new CSVFileWriter();
+       csvFileWriter.write(outputPath, list_of_DMScoordinates);
 
 
     }
