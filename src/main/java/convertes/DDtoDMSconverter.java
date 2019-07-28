@@ -24,7 +24,7 @@ public class DDtoDMSconverter implements Converter {
 
 
        DDtoDMSUtils dDtoDMSUtils = new DDtoDMSUtils();
-       List<DMScoordinates> list_of_DMScoordinates = dDtoDMSUtils.ddToDMSutils(inputPath, outputPath);
+       List<DMScoordinates> list_of_DMScoordinates = dDtoDMSUtils.ddToDMSutils(inputPath);
 
 
 
