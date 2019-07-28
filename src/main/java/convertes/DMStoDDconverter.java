@@ -5,7 +5,7 @@ import converting_tools.CoordinatesFormat;
 
 public class DMStoDDconverter implements Converter {
     @Override
-    public void convert(String inputPath, String outputPath, CoordinatesFormat coordinatesFormat) {
+    public void convert(String inputPath, String outputPath) {
 
     }
 }

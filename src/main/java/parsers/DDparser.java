@@ -21,6 +21,7 @@ public class DDparser {
 
 
             DDCoordinates ddCoordinates = new DDCoordinates();
+
             ddCoordinates.setLatitude(latitude);
             ddCoordinates.setLongitude(longitude);
 
