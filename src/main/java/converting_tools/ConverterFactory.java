@@ -10,7 +10,7 @@ public class ConverterFactory {
         if(CoordinatesFormat.DMStoDD.equals(coordinatesFormat)){
             return new DMStoDDconverter();
         }
-        if(CoordinatesFormat.DMtoDMS.equals(coordinatesFormat)){
+        if(CoordinatesFormat.DDtoDMS.equals(coordinatesFormat)){
             return new DDtoDMSconverter();
         }
         return null;
