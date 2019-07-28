@@ -21,6 +21,7 @@ public class DMSparser {
         for(int row = 0; row<table_of_coordinates.length; row++){
                String[] latitude = table_of_coordinates[row][0].split(" ");
                String[] longitude = table_of_coordinates[row][1].split(" ");
+
                dLatitude = Integer.parseInt(latitude[0]);
                mLatitude = Integer.parseInt(latitude[1]);
                sLatitude = Double.parseDouble(latitude[2]);
@@ -36,5 +37,4 @@ public class DMSparser {
         }
         return dmsCoordinatesList;
     }
-    //TODO converter DMS to DD
 }
