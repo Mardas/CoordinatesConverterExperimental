@@ -1,5 +1,6 @@
 package convertes;
 
+import calculators.DMStoDDcalculator;
 import coordinates.DDCoordinates;
 import coordinates.DMScoordinates;
 import fileReader.CSV_FileReader;

@@ -1,4 +1,4 @@
-package convertes;
+package calculators;
 
 import coordinates.DDCoordinates;
 import coordinates.DMScoordinates;
