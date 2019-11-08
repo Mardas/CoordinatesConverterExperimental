@@ -17,7 +17,7 @@ public class DMSlongitudeBuilder {
         return this;
     }
 
-    public DMSlongitudeBuilder seconds (Double s){
+    public DMSlongitudeBuilder seconds (Integer s){
         dmsLongitude.setSeconds(s);
         return this;
     }

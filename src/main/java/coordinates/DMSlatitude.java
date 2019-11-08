@@ -3,7 +3,7 @@ package coordinates;
 public class DMSlatitude {
     private Integer degrees;
     private Integer minutes;
-    private Double seconds;
+    private Integer seconds;
 
     public Integer getDegrees() {
         return degrees;
@@ -21,11 +21,11 @@ public class DMSlatitude {
         this.minutes = minutes;
     }
 
-    public Double getSeconds() {
+    public Integer getSeconds() {
         return seconds;
     }
 
-    public void setSeconds(Double seconds) {
+    public void setSeconds(Integer seconds) {
         this.seconds = seconds;
     }
 

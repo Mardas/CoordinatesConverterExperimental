@@ -3,7 +3,7 @@ package coordinates;
 public class DMSutils {
 
 
-    public DMScoordinates setDMScoordinates (Integer dLatitude, Integer mLatitude, Double sLatitude, Integer dLongitude, Integer mLongitude, Double sLongitude){
+    public DMScoordinates setDMScoordinates (Integer dLatitude, Integer mLatitude, Integer sLatitude, Integer dLongitude, Integer mLongitude, Integer sLongitude){
 
         DMSlatitudeBuilder dmsLatitudebuilder = new DMSlatitudeBuilder();
         DMSlatitude dmsLatitude = dmsLatitudebuilder

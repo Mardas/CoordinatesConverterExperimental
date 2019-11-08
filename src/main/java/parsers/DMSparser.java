@@ -11,11 +11,11 @@ public class DMSparser {
     public List<DMScoordinates> parseDMScoordinates (String[][] table_of_coordinates){
         Integer dLatitude;
         Integer mLatitude;
-        Double sLatitude;
+        Integer sLatitude;
 
         Integer dLongitude;
         Integer mLongitude;
-        Double sLongitude;
+        Integer sLongitude;
 
         List<DMScoordinates> dmsCoordinatesList = new ArrayList<>();
         for(int row = 0; row<table_of_coordinates.length; row++){
@@ -24,11 +24,11 @@ public class DMSparser {
 
                dLatitude = Integer.parseInt(latitude[0]);
                mLatitude = Integer.parseInt(latitude[1]);
-               sLatitude = Double.parseDouble(latitude[2]);
+               sLatitude = Integer.parseInt(latitude[2]);
 
                dLongitude = Integer.parseInt(longitude[0]);
                mLongitude = Integer.parseInt(longitude[1]);
-               sLongitude = Double.parseDouble(longitude[2]);
+               sLongitude = Integer.parseInt(longitude[2]);
 
             DMSutils dmsUtils = new DMSutils();
             DMScoordinates dmsCoordinates = dmsUtils
