@@ -4,6 +4,8 @@ import coordinates.DDCoordinates;
 import coordinates.DMScoordinates;
 import coordinates.DMSutils;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,5 +39,12 @@ public class DDtoDMScalculator {
             dmsCoordinatesList.add(dmsCoordinates);
         }
         return dmsCoordinatesList;
+    }
+    private static Double round(Double value, int places) {
+        if (places < 0) throw new IllegalArgumentException();
+
+        BigDecimal bd = BigDecimal.valueOf(value);
+        bd = bd.setScale(places, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 }
