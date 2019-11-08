@@ -16,8 +16,13 @@ public class DDparser {
 
         List<DDCoordinates> ddCoordinatesList = new ArrayList<>();
         for (int row = 0; row < table_of_coordinates.length; row++) {
-            latitude = Double.parseDouble(table_of_coordinates[row][0]);
-            longitude = Double.parseDouble(table_of_coordinates[row][1]);
+            if(table_of_coordinates[row][0].equals("") && table_of_coordinates[row][1].equals("")){
+                latitude = null;
+                longitude = null;
+            }else {
+                latitude = Double.parseDouble(table_of_coordinates[row][0]);
+                longitude = Double.parseDouble(table_of_coordinates[row][1]);
+            }
 
 
             DDCoordinates ddCoordinates = new DDCoordinates();

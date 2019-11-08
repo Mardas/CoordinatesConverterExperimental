@@ -10,9 +10,15 @@ public class ListToTable {
         for(int i=0; i<list_of_coordinates.size(); i++){
             table_of_readLine = list_of_coordinates.get(i).split(";");
 
-            table_of_coordinates[i][0] = table_of_readLine[0];
-            table_of_coordinates[i][1] = table_of_readLine[1];
-            //counter++;
+            if(list_of_coordinates.get(i).equals("")){
+                table_of_coordinates[i][0] = null;
+                table_of_coordinates[i][1] = null;
+            }else {
+
+                table_of_coordinates[i][0] = table_of_readLine[0];
+                table_of_coordinates[i][1] = table_of_readLine[1];
+                //counter++;
+            }
         }
 
         return table_of_coordinates;

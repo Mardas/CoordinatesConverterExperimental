@@ -6,7 +6,7 @@ public class DMScoordinates {
     DMSlongitude dmsLongitude;
 
 
-    DMScoordinates (DMSlatitude dmsLatitude, DMSlongitude dmsLongitude){
+    public DMScoordinates (DMSlatitude dmsLatitude, DMSlongitude dmsLongitude){
         this.dmsLatitude = dmsLatitude;
         this.dmsLongitude = dmsLongitude;
     }
@@ -21,8 +21,8 @@ public class DMScoordinates {
 
     @Override
     public String toString(){
-        return this.dmsLatitude.getDegrees() + " "+ this.dmsLatitude.getMinutes() + " " + this.dmsLatitude.getSeconds() + ";"
-                + this.dmsLongitude.getDegrees() + " " + this.dmsLongitude.getMinutes() + " " + this.dmsLongitude.getSeconds();
+        return this.dmsLatitude.getDegrees() + "° "+ this.dmsLatitude.getMinutes() + "' " + this.dmsLatitude.getSeconds() + "\";"
+                + this.dmsLongitude.getDegrees() + "° " + this.dmsLongitude.getMinutes() + "' " + this.dmsLongitude.getSeconds()+"\"";
     }
 
 }

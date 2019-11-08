@@ -1,6 +1,7 @@
 package convertes;
 
 import converting_tools.CoordinatesFormat;
+import coordinates.DMScoordinates;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +12,7 @@ import java.io.IOException;
 
 @WebServlet(name = "AppServlet", urlPatterns = "/convert")
 public class AppServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String inputPath = request.getParameter("inputPath");
