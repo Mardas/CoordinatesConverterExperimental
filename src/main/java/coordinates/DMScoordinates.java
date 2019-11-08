@@ -19,10 +19,15 @@ public class DMScoordinates {
         return dmsLongitude;
     }
 
+//    @Override
+//    public String toString(){
+//        return this.dmsLatitude.getDegrees() + " "+ this.dmsLatitude.getMinutes() + " " + this.dmsLatitude.getSeconds() + ";"
+//                + this.dmsLongitude.getDegrees() + " " + this.dmsLongitude.getMinutes() + " " + this.dmsLongitude.getSeconds();
+//    }
     @Override
     public String toString(){
-        return this.dmsLatitude.getDegrees() + " "+ this.dmsLatitude.getMinutes() + " " + this.dmsLatitude.getSeconds() + ";"
-                + this.dmsLongitude.getDegrees() + " " + this.dmsLongitude.getMinutes() + " " + this.dmsLongitude.getSeconds();
+        return this.dmsLatitude.getDegrees() + "° "+ this.dmsLatitude.getMinutes() + "' " + this.dmsLatitude.getSeconds() + "\";"
+                + this.dmsLongitude.getDegrees() + "° " + this.dmsLongitude.getMinutes() + "' " + this.dmsLongitude.getSeconds()+"\"";
     }
 
 }
