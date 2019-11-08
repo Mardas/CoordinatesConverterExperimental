@@ -24,7 +24,7 @@ public class DDtoDMScalculator {
             Integer mLatitude = minutesLatitude.intValue();
 
             Double secondsLatitude = (minutesLatitude%minutesLatitude.intValue())*60;
-            Integer sLatitude = secondsLatitude.intValue();
+            Integer sLatitude = (int) Math.round(secondsLatitude);
 
             Integer dLongitude = longitude.intValue();
 
@@ -32,7 +32,7 @@ public class DDtoDMScalculator {
             Integer mLongitude = minutesLongitude.intValue();
 
             Double secondsLongitude = (minutesLongitude%minutesLongitude.intValue())*60;
-            Integer sLongitude = secondsLatitude.intValue();
+            Integer sLongitude = (int) Math.round(secondsLongitude);
 
 
             DMSutils dmsUtils = new DMSutils();
